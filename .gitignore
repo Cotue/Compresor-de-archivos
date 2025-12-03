@@ -1,0 +1,25 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Backup files
+[Tt]emp/
+*.tmp
+
+# NuGet
+packages/
+*.nupkg
+
+# Logs
+*.log
+
+# Others
+*.db
+*.cache
