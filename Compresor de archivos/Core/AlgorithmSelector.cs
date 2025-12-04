@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Compresor_de_archivos.Core
 {
-    internal class AlgorithmSelector
+    public enum AlgorithmSelector
     {
+        Huffman,
+        LZ77,
+        LZ78
     }
 }

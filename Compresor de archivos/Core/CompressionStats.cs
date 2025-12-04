@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Compresor_de_archivos.Core
 {
-    internal class CompressionStats
+    public class CompressionStats
     {
+        public long ElapsedMilliseconds { get; set; }
+        public long MemoryBytes { get; set; }
+        public double CompressionRatio { get; set; }
     }
 }

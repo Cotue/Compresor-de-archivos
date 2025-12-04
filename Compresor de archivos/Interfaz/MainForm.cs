@@ -13,6 +13,11 @@ namespace Compresor_de_archivos.Interfaz
         {
             InitializeComponent();
 
+
+
+            //----------------------------------------------------------------
+            //Logica para arrastar y soltar archivos
+
             // Adjuntar el drag & drop al GroupBox de archivos, por ejemplo:
             drag.Attach(grpInputFiles);
 
@@ -26,6 +31,11 @@ namespace Compresor_de_archivos.Interfaz
                             listInputFiles.Items.Add(file);
                 }
             };
+            // ----------------------------------------------------------------
+
+            //----------------------------------------------------------------
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
