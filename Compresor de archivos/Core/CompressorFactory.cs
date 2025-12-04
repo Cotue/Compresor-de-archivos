@@ -19,8 +19,8 @@ namespace Compresor_de_archivos.Core
                 //case AlgorithmSelector.LZ77:
                     //return new Lz77Compressor();
 
-                //case AlgorithmSelector.LZ78:
-                    //return new Lz78Compressor();
+                case AlgorithmSelector.LZ78:
+                    return new LZ78Compressor();
 
                 default:
                     throw new ArgumentOutOfRangeException(nameof(algorithm));

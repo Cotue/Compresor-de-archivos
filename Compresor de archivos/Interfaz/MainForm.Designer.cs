@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             grpInputFiles = new GroupBox();
+            btnClearFiles = new Button();
+            btnAddFiles = new Button();
             listInputFiles = new ListBox();
             grpConfig = new GroupBox();
-            btnAddFiles = new Button();
-            btnClearFiles = new Button();
-            label1 = new Label();
-            cmbAlgorithm = new ComboBox();
-            rbCompress = new RadioButton();
             rbDecompress = new RadioButton();
+            rbCompress = new RadioButton();
+            cmbAlgorithm = new ComboBox();
+            label1 = new Label();
             grpOutput = new GroupBox();
-            txtOutputFolder = new TextBox();
             btnBrowseOutput = new Button();
+            txtOutputFolder = new TextBox();
             grpExecute = new GroupBox();
-            btnRun = new Button();
             btnExit = new Button();
+            btnRun = new Button();
             grpStats = new GroupBox();
-            lblTime = new Label();
-            lblMemory = new Label();
-            lblRatio = new Label();
-            progressBar = new ProgressBar();
             txtLog = new RichTextBox();
+            progressBar = new ProgressBar();
+            lblRatio = new Label();
+            lblMemory = new Label();
+            lblTime = new Label();
             grpInputFiles.SuspendLayout();
             grpConfig.SuspendLayout();
             grpOutput.SuspendLayout();
@@ -67,6 +67,24 @@
             grpInputFiles.TabIndex = 0;
             grpInputFiles.TabStop = false;
             grpInputFiles.Text = "Arrastre el archivo aquí";
+            // 
+            // btnClearFiles
+            // 
+            btnClearFiles.Location = new Point(200, 190);
+            btnClearFiles.Name = "btnClearFiles";
+            btnClearFiles.Size = new Size(150, 30);
+            btnClearFiles.TabIndex = 2;
+            btnClearFiles.Text = " Limpiar Data";
+            btnClearFiles.UseVisualStyleBackColor = true;
+            // 
+            // btnAddFiles
+            // 
+            btnAddFiles.Location = new Point(20, 190);
+            btnAddFiles.Name = "btnAddFiles";
+            btnAddFiles.Size = new Size(150, 30);
+            btnAddFiles.TabIndex = 1;
+            btnAddFiles.Text = "Subir Archivo";
+            btnAddFiles.UseVisualStyleBackColor = true;
             // 
             // listInputFiles
             // 
@@ -90,42 +108,15 @@
             grpConfig.TabStop = false;
             grpConfig.Text = "Cofiguracion";
             // 
-            // btnAddFiles
+            // rbDecompress
             // 
-            btnAddFiles.Location = new Point(20, 190);
-            btnAddFiles.Name = "btnAddFiles";
-            btnAddFiles.Size = new Size(150, 30);
-            btnAddFiles.TabIndex = 1;
-            btnAddFiles.Text = "Subir Archivo";
-            btnAddFiles.UseVisualStyleBackColor = true;
-        
-            // 
-            // btnClearFiles
-            // 
-            btnClearFiles.Location = new Point(200, 190);
-            btnClearFiles.Name = "btnClearFiles";
-            btnClearFiles.Size = new Size(150, 30);
-            btnClearFiles.TabIndex = 2;
-            btnClearFiles.Text = " Limpiar Data";
-            btnClearFiles.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(20, 24);
-            label1.Name = "label1";
-            label1.Size = new Size(61, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Algoritmo";
-            // 
-            // cmbAlgorithm
-            // 
-            cmbAlgorithm.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbAlgorithm.FormattingEnabled = true;
-            cmbAlgorithm.Location = new Point(120, 28);
-            cmbAlgorithm.Name = "cmbAlgorithm";
-            cmbAlgorithm.Size = new Size(200, 23);
-            cmbAlgorithm.TabIndex = 1;
+            rbDecompress.AutoSize = true;
+            rbDecompress.Location = new Point(208, 69);
+            rbDecompress.Name = "rbDecompress";
+            rbDecompress.Size = new Size(89, 19);
+            rbDecompress.TabIndex = 3;
+            rbDecompress.Text = "Descoprimir";
+            rbDecompress.UseVisualStyleBackColor = true;
             // 
             // rbCompress
             // 
@@ -139,15 +130,23 @@
             rbCompress.Text = "Comprimir";
             rbCompress.UseVisualStyleBackColor = true;
             // 
-            // rbDecompress
+            // cmbAlgorithm
             // 
-            rbDecompress.AutoSize = true;
-            rbDecompress.Location = new Point(208, 69);
-            rbDecompress.Name = "rbDecompress";
-            rbDecompress.Size = new Size(89, 19);
-            rbDecompress.TabIndex = 3;
-            rbDecompress.Text = "Descoprimir";
-            rbDecompress.UseVisualStyleBackColor = true;
+            cmbAlgorithm.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbAlgorithm.FormattingEnabled = true;
+            cmbAlgorithm.Location = new Point(120, 28);
+            cmbAlgorithm.Name = "cmbAlgorithm";
+            cmbAlgorithm.Size = new Size(200, 23);
+            cmbAlgorithm.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(20, 24);
+            label1.Name = "label1";
+            label1.Size = new Size(61, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Algoritmo";
             // 
             // grpOutput
             // 
@@ -160,14 +159,6 @@
             grpOutput.TabStop = false;
             grpOutput.Text = "Carpeta de salida";
             // 
-            // txtOutputFolder
-            // 
-            txtOutputFolder.Location = new Point(20, 30);
-            txtOutputFolder.Name = "txtOutputFolder";
-            txtOutputFolder.ReadOnly = true;
-            txtOutputFolder.Size = new Size(260, 23);
-            txtOutputFolder.TabIndex = 0;
-            // 
             // btnBrowseOutput
             // 
             btnBrowseOutput.Location = new Point(290, 30);
@@ -176,6 +167,14 @@
             btnBrowseOutput.TabIndex = 1;
             btnBrowseOutput.Text = "Cambiar";
             btnBrowseOutput.UseVisualStyleBackColor = true;
+            // 
+            // txtOutputFolder
+            // 
+            txtOutputFolder.Location = new Point(20, 30);
+            txtOutputFolder.Name = "txtOutputFolder";
+            txtOutputFolder.ReadOnly = true;
+            txtOutputFolder.Size = new Size(260, 23);
+            txtOutputFolder.TabIndex = 0;
             // 
             // grpExecute
             // 
@@ -188,15 +187,6 @@
             grpExecute.TabStop = false;
             grpExecute.Text = "Ejecucion";
             // 
-            // btnRun
-            // 
-            btnRun.Location = new Point(30, 30);
-            btnRun.Name = "btnRun";
-            btnRun.Size = new Size(150, 40);
-            btnRun.TabIndex = 0;
-            btnRun.Text = "Ejecutar";
-            btnRun.UseVisualStyleBackColor = true;
-            // 
             // btnExit
             // 
             btnExit.Location = new Point(200, 30);
@@ -205,6 +195,16 @@
             btnExit.TabIndex = 1;
             btnExit.Text = "salir";
             btnExit.UseVisualStyleBackColor = true;
+            // 
+            // btnRun
+            // 
+            btnRun.Location = new Point(30, 30);
+            btnRun.Name = "btnRun";
+            btnRun.Size = new Size(150, 40);
+            btnRun.TabIndex = 0;
+            btnRun.Text = "Ejecutar";
+            btnRun.UseVisualStyleBackColor = true;
+            btnRun.Click += btnEjecutar_Click;
             // 
             // grpStats
             // 
@@ -220,23 +220,21 @@
             grpStats.TabStop = false;
             grpStats.Text = "Stats";
             // 
-            // lblTime
+            // txtLog
             // 
-            lblTime.AutoSize = true;
-            lblTime.Location = new Point(20, 30);
-            lblTime.Name = "lblTime";
-            lblTime.Size = new Size(48, 15);
-            lblTime.TabIndex = 0;
-            lblTime.Text = "Tiempo";
+            txtLog.Location = new Point(20, 170);
+            txtLog.Name = "txtLog";
+            txtLog.ReadOnly = true;
+            txtLog.Size = new Size(380, 150);
+            txtLog.TabIndex = 4;
+            txtLog.Text = "";
             // 
-            // lblMemory
+            // progressBar
             // 
-            lblMemory.AutoSize = true;
-            lblMemory.Location = new Point(20, 60);
-            lblMemory.Name = "lblMemory";
-            lblMemory.Size = new Size(66, 15);
-            lblMemory.TabIndex = 1;
-            lblMemory.Text = "Memoria: -";
+            progressBar.Location = new Point(20, 130);
+            progressBar.Name = "progressBar";
+            progressBar.Size = new Size(380, 25);
+            progressBar.TabIndex = 3;
             // 
             // lblRatio
             // 
@@ -247,21 +245,23 @@
             lblRatio.TabIndex = 2;
             lblRatio.Text = "Tasa de compresion: -";
             // 
-            // progressBar
+            // lblMemory
             // 
-            progressBar.Location = new Point(20, 130);
-            progressBar.Name = "progressBar";
-            progressBar.Size = new Size(380, 25);
-            progressBar.TabIndex = 3;
+            lblMemory.AutoSize = true;
+            lblMemory.Location = new Point(20, 60);
+            lblMemory.Name = "lblMemory";
+            lblMemory.Size = new Size(66, 15);
+            lblMemory.TabIndex = 1;
+            lblMemory.Text = "Memoria: -";
             // 
-            // txtLog
+            // lblTime
             // 
-            txtLog.Location = new Point(20, 170);
-            txtLog.Name = "txtLog";
-            txtLog.ReadOnly = true;
-            txtLog.Size = new Size(380, 150);
-            txtLog.TabIndex = 4;
-            txtLog.Text = "";
+            lblTime.AutoSize = true;
+            lblTime.Location = new Point(20, 30);
+            lblTime.Name = "lblTime";
+            lblTime.Size = new Size(48, 15);
+            lblTime.TabIndex = 0;
+            lblTime.Text = "Tiempo";
             // 
             // MainForm
             // 
